@@ -1,0 +1,21 @@
+# audio bitrate in kbit/s
+audio_bitrate: 128
+
+# video bitrate in kbit/s
+video_bitrate: 3072
+
+# maximum fps delivered via WebRTC, 0 is for no maximum
+max_fps: 30
+
+# password for connecting to stream
+password: "neko"
+
+# admin password for connecting to stream
+password_admin: "admin"
+
+# default screen resolution and framerate
+screen: "1280x720@30"
+
+# limits the pool of ephemeral ports that ICE UDP connections can allocate from
+epr: "59000-59100"
+
