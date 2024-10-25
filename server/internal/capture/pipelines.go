@@ -30,7 +30,7 @@ import (
 */
 
 const (
-	videoSrc = "ximagesrc display-name=%s show-pointer=true use-damage=false ! video/x-raw,framerate=%d/1 ! videoconvert ! queue ! "
+	videoSrc = "ximagesrc display-name=%s show-pointer=false use-damage=false ! video/x-raw,framerate=%d/1 ! videoconvert ! queue ! "
 	audioSrc = "pulsesrc device=%s ! audio/x-raw,channels=2 ! audioconvert ! "
 )
 
