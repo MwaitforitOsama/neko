@@ -1,59 +1,49 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chromium-app-udp-service
+  name: neko-app-udp-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    app: chromium-app
+    app: neko-app
   ports:
-    - name: udp-55000
+    - name: udp-port-0
       protocol: UDP
       port: 55000
       targetPort: 55000
-      nodePort: 30000
-    - name: udp-55001
+    - name: udp-port-1
       protocol: UDP
       port: 55001
       targetPort: 55001
-      nodePort: 30001
-    - name: udp-55002
+    - name: udp-port-2
       protocol: UDP
       port: 55002
       targetPort: 55002
-      nodePort: 30002
-    - name: udp-55003
+    - name: udp-port-3
       protocol: UDP
       port: 55003
       targetPort: 55003
-      nodePort: 30003
-    - name: udp-55004
+    - name: udp-port-4
       protocol: UDP
       port: 55004
       targetPort: 55004
-      nodePort: 30004
-    - name: udp-55005
+    - name: udp-port-5
       protocol: UDP
       port: 55005
       targetPort: 55005
-      nodePort: 30005
-    - name: udp-55006
+    - name: udp-port-6
       protocol: UDP
       port: 55006
       targetPort: 55006
-      nodePort: 30006
-    - name: udp-55007
+    - name: udp-port-7
       protocol: UDP
       port: 55007
       targetPort: 55007
-      nodePort: 30007
-    - name: udp-55008
+    - name: udp-port-8
       protocol: UDP
       port: 55008
       targetPort: 55008
-      nodePort: 30008
-    - name: udp-55009
+    - name: udp-port-9
       protocol: UDP
       port: 55009
       targetPort: 55009
-      nodePort: 30009

@@ -38,13 +38,14 @@ if [[ "${SERVER_TAG}" == "intel-"* ]]; then
 fi
 
 # Build the Docker command
-DOCKER_CMD="docker run --rm -it \
+DOCKER_CMD="docker run --rm -d \
   --name 'neko_dev' \
   $GPU_FLAG \
   -p '${SERVER_PORT}:8080' \
   -p '${SERVER_EPR}:${SERVER_EPR}/udp' \
-  -e 'NEKO_SCREEN=1024x576@30' \
+  -e 'NEKO_SCREEN=1920x1080@30' \
   -e 'NEKO_EPR=${SERVER_EPR}' \
+  -e 'NEKO_NAT1TO1=${SERVER_IP}' \
   -e 'NEKO_ICELITE=true' \
   -e 'NEKO_MAX_FPS=25' \
   -e 'NEKO_FILE_TRANSFER_ENABLED=true' \

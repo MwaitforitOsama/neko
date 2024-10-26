@@ -19,25 +19,25 @@ spec:
         ports:
         - name: http
           containerPort: 8080
-        - name: udp-55000
+        - name: udp-port-0
           containerPort: 55000
-        - name: udp-55001
+        - name: udp-port-1
           containerPort: 55001
-        - name: udp-55002
+        - name: udp-port-2
           containerPort: 55002
-        - name: udp-55003
+        - name: udp-port-3
           containerPort: 55003
-        - name: udp-55004
+        - name: udp-port-4
           containerPort: 55004
-        - name: udp-55005
+        - name: udp-port-5
           containerPort: 55005
-        - name: udp-55006
+        - name: udp-port-6
           containerPort: 55006
-        - name: udp-55007
+        - name: udp-port-7
           containerPort: 55007
-        - name: udp-55008
+        - name: udp-port-8
           containerPort: 55008
-        - name: udp-55009
+        - name: udp-port-9
           containerPort: 55009
         env:
         - name: NEKO_SCREEN
@@ -56,9 +56,5 @@ spec:
           value: "admin"
         - name: NEKO_IMPLICIT_CONTROL
           value: "true"
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
       imagePullSecrets:
       - name: my-registry-secret
