@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chromium-app-udp-service
+spec:
+  type: NodePort
+  selector:
+    app: chromium-app
+  ports:
+    - name: udp-55000
+      protocol: UDP
+      port: 55000
+      targetPort: 55000
+      nodePort: 30000
+    - name: udp-55001
+      protocol: UDP
+      port: 55001
+      targetPort: 55001
+      nodePort: 30001
+    - name: udp-55002
+      protocol: UDP
+      port: 55002
+      targetPort: 55002
+      nodePort: 30002
+    - name: udp-55003
+      protocol: UDP
+      port: 55003
+      targetPort: 55003
+      nodePort: 30003
+    - name: udp-55004
+      protocol: UDP
+      port: 55004
+      targetPort: 55004
+      nodePort: 30004
+    - name: udp-55005
+      protocol: UDP
+      port: 55005
+      targetPort: 55005
+      nodePort: 30005
+    - name: udp-55006
+      protocol: UDP
+      port: 55006
+      targetPort: 55006
+      nodePort: 30006
+    - name: udp-55007
+      protocol: UDP
+      port: 55007
+      targetPort: 55007
+      nodePort: 30007
+    - name: udp-55008
+      protocol: UDP
+      port: 55008
+      targetPort: 55008
+      nodePort: 30008
+    - name: udp-55009
+      protocol: UDP
+      port: 55009
+      targetPort: 55009
+      nodePort: 30009

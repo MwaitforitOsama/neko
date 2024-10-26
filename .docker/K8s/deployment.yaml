@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chromium-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chromium-app
+  template:
+    metadata:
+      labels:
+        app: chromium-app
+    spec:
+      containers:
+      - name: chromium-app-container
+        image: 192.168.49.2:30154/osama/neko:chromium
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 8080
+        - name: udp-55000
+          containerPort: 55000
+        - name: udp-55001
+          containerPort: 55001
+        - name: udp-55002
+          containerPort: 55002
+        - name: udp-55003
+          containerPort: 55003
+        - name: udp-55004
+          containerPort: 55004
+        - name: udp-55005
+          containerPort: 55005
+        - name: udp-55006
+          containerPort: 55006
+        - name: udp-55007
+          containerPort: 55007
+        - name: udp-55008
+          containerPort: 55008
+        - name: udp-55009
+          containerPort: 55009
+        env:
+        - name: NEKO_SCREEN
+          value: "1920x1080@30"
+        - name: NEKO_EPR
+          value: "55000-55009"
+        - name: NEKO_NAT1TO1
+          value: ""
+        - name: NEKO_ICELITE
+          value: "true"
+        - name: NEKO_MAX_FPS
+          value: "25"
+        - name: NEKO_PASSWORD
+          value: "osama"
+        - name: NEKO_PASSWORD_ADMIN
+          value: "admin"
+        - name: NEKO_IMPLICIT_CONTROL
+          value: "true"
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+      imagePullSecrets:
+      - name: my-registry-secret
